@@ -1,10 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:CHEJ_App002.Infrastructure;assembly=CHEJ_App002"
              x:Class="CHEJ_App002.App">
-	<Application.Resources>
+    
+    <Application.Resources>
 
-		<!-- Application resource dictionary -->
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            
+            <!--Locator (Permite la union de los Views con las ViewModels y hace una instancia unica del MainViewModel en todo el proyecto-->
+            <infra:InstanceLocator x:Key="Locator"/>
+            
+            <!--Colors-->
+            <Color x:Key="BackGround">#EFECCA</Color>
+            <Color x:Key="FontColor">#002F2F</Color>
+            <Color x:Key="AccentColor1">#E6E2AF</Color>
+            <Color x:Key="AccentColor2">#A7A37E</Color>
+            <Color x:Key="AccentColor3">#046380</Color>
 
-	</Application.Resources>
+            <!--Variables-->
+            <x:String x:Key="CompanyName">CHEJ Consultor, C.A.</x:String>
+            <x:String x:Key="Slogan">- Su Requerimiento es Nuestro Compromiso -</x:String>
+            <x:String x:Key="AppName">Currency Converter</x:String>
+            <x:String x:Key="CurrencyOrigin">Bólivares:</x:String>
+            <x:String x:Key="MountBolivares">Enter an amount in bólivares...!!!</x:String>
+            <x:String x:Key="ValueDollars">Value in dollars...!!!</x:String>
+            <x:String x:Key="ValueEuros">Value in euros...!!!</x:String>
+            <x:String x:Key="ValuePounds">Value in pounds...!!!</x:String>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+
 </Application>

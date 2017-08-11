@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CHEJ_App002.Views.MainPage"
+             Title="MainPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BackgroundColor="{StaticResource BackGround}">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,30,10,30">
+
+            <Label Text="{StaticResource CompanyName}"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource AccentColor2}"/>
+
+            <Label Text="{StaticResource Slogan}"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   TextColor="{StaticResource AccentColor2}"/>
+
+            <Label Text="{StaticResource AppName}"
+                   TextColor="{StaticResource FontColor}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+
+            <Grid Padding="10">
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="{StaticResource CurrencyOrigin}"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Bolivares, Mode=TwoWay}"
+                           Grid.Column="1"
+                           Placeholder="{StaticResource MountBolivares}"
+                           Keyboard="Numeric"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="Convert"
+                            Grid.Column="0"
+                            Command="{Binding ConvertCommand}"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Dollars:"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Dollars, Mode=TwoWay}"
+                           Grid.Column="1"
+                           Placeholder="{StaticResource ValueDollars}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           IsEnabled="False"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Euros:"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Euros, Mode=TwoWay}"
+                           Grid.Column="1"
+                           Placeholder="{StaticResource ValueEuros}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           IsEnabled="False"/>
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Pounds:"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+
+                    <Entry Text="{Binding Pounds, Mode=TwoWay}"
+                           Grid.Column="1"
+                           Placeholder="{StaticResource ValuePounds}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Center"
+                           IsEnabled="False"/>
+                </Grid>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
